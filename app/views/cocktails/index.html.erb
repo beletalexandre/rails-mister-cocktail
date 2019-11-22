@@ -1,0 +1,10 @@
+<div class="container_index">
+  <h1>Cocktails of the house...</h1>
+  <div class="col-4">
+    <% @cocktails.each do |cocktail| %>
+      <br><%= link_to cocktail.name, cocktail_path(cocktail) %></br>
+    <% end %>
+  </div>
+</div>
+
+<div class="bottom-click"><%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-primary" %></div>
